@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @link      https://github.com/bajadev/yii2-dynamicform
  * @copyright Copyright (c) 2014 Wanderson Bragança
  * @license   https://github.com/bajadev/yii2-dynamicform/blob/master/LICENSE
  */
 
-namespace kidzen\dynamicform;
+namespace hmtvltk2\dynamicform;
 
 use Symfony\Component\CssSelector\CssSelectorConverter;
 use Yii;
@@ -108,7 +109,7 @@ class DynamicFormWidget extends \yii\base\Widget
         if (empty($this->formId)) {
             throw new InvalidConfigException("The 'formId' property must be set.");
         }
-        if (empty($this->insertPosition) || ! in_array($this->insertPosition, $this->_insertPositions)) {
+        if (empty($this->insertPosition) || !in_array($this->insertPosition, $this->_insertPositions)) {
             throw new InvalidConfigException("Invalid configuration to property 'insertPosition' (allowed values: 'bottom' or 'top')");
         }
         if (empty($this->formFields) || !is_array($this->formFields)) {
@@ -203,24 +204,24 @@ class DynamicFormWidget extends \yii\base\Widget
         DynamicFormAsset::register($view);
 
         // add a click handler for the clone button
-        $js = 'jQuery(document).on("click", "#'. $this->formId . ' '. $this->insertButton . '", function(e) {'. "\n";
+        $js = 'jQuery(document).on("click", "#' . $this->formId . ' ' . $this->insertButton . '", function(e) {' . "\n";
         $js .= "    e.preventDefault();\n";
         $js .= '    jQuery(".' .  $this->widgetContainer . '").triggerHandler("beforeInsert", [jQuery(this)]);' . "\n";
-        $js .= '    jQuery(".' .  $this->widgetContainer . '").yiiDynamicForm("addItem", '. $this->_hashVar . ", e, jQuery(this));\n";
+        $js .= '    jQuery(".' .  $this->widgetContainer . '").yiiDynamicForm("addItem", ' . $this->_hashVar . ", e, jQuery(this));\n";
         $js .= "});\n";
         $view->registerJs($js, $view::POS_READY);
 
         // add a click handler for the remove button
-        $js = 'jQuery(document).on("click", "#'. $this->formId . ' '. $this->deleteButton . '", function(e) {'. "\n";
+        $js = 'jQuery(document).on("click", "#' . $this->formId . ' ' . $this->deleteButton . '", function(e) {' . "\n";
         $js .= "    e.preventDefault();\n";
-        $js .= '    jQuery(".' .  $this->widgetContainer . '").yiiDynamicForm("deleteItem", '. $this->_hashVar . ", e, jQuery(this));\n";
+        $js .= '    jQuery(".' .  $this->widgetContainer . '").yiiDynamicForm("deleteItem", ' . $this->_hashVar . ", e, jQuery(this));\n";
         $js .= "});\n";
         $view->registerJs($js, $view::POS_READY);
 
-        $js = 'jQuery("#' . $this->formId . '").yiiDynamicForm(' . $this->_hashVar .');' . "\n";
+        $js = 'jQuery("#' . $this->formId . '").yiiDynamicForm(' . $this->_hashVar . ');' . "\n";
         $view->registerJs($js, $view::POS_LOAD);
         // skip attribute validation if input not exist in yiiActiveForm.beforeValidateAttribute event
-        if (isset($this->_options['min']) && $this->_options['min'] === 0){
+        if (isset($this->_options['min']) && $this->_options['min'] === 0) {
             $js = 'jQuery("#' . $this->formId . '").on("beforeValidateAttribute", function(event, attribute){' . "\n";
             $js .= "    if($(attribute.input).length == 0)\n";
             $js .= "        return false;\n";

@@ -1,8 +1,7 @@
 {
-    "name": "kidzen/yii2-dynamicform",
+    "name": "hmtvltk2/yii2-dynamicform",
     "description": "It is widget to yii2 framework to clone form elements in a nested manner, maintaining accessibility.",
     "keywords": [
-        "kidzen",
         "yii2",
         "extension",
         "widget",
@@ -13,20 +12,20 @@
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/kidzen/yii2-dynamicform/issues",
-        "wiki": "https://github.com/kidzen/yii2-dynamicform/wiki/",
-        "source": "https://github.com/kidzen/yii2-dynamicform"
+        "issues": "https://github.com/hmtvltk2/yii2-dynamicform/issues",
+        "wiki": "https://github.com/hmtvltk2/yii2-dynamicform/wiki/",
+        "source": "https://github.com/hmtvltk2/yii2-dynamicform"
     },
     "authors": [
         {
-            "name": "kidzen",
-            "email": "kidzenfxc@gmail.com"
+            "name": "hmtvltk2",
+            "email": "hmtvltk2@gmail.com"
         }
     ],
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/kidzen/yii2-dynamicform"
+            "url": "https://github.com/hmtvltk2/yii2-dynamicform"
         },
         {
             "type": "composer",
@@ -34,16 +33,16 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "~2.0.5",
-        "symfony/dom-crawler": "~3.4.11",
-        "symfony/css-selector": "^3.4.11"
+        "yiisoft/yii2": "*",
+        "symfony/dom-crawler": "*",
+        "symfony/css-selector": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*"
     },
     "autoload": {
         "psr-4": {
-            "kidzen\\dynamicform\\": "src"
+            "hmtvltk2\\dynamicform\\": "src"
         }
     }
 }

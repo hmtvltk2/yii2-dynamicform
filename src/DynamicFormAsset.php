@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @link      https://github.com/bajadev/yii2-dynamicform
  * @copyright Copyright (c) 2014 Wanderson Bragança
  * @license   https://github.com/bajadev/yii2-dynamicform/blob/master/LICENSE
  */
 
-namespace kidzen\dynamicform;
+namespace hmtvltk2\dynamicform;
 
 /**
  * Asset bundle for dynamicform Widget

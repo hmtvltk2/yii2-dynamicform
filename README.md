@@ -26,13 +26,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist kidzen/yii2-dynamicform "*"
+php composer.phar require --prefer-dist hmtvltk2/yii2-dynamicform "*"
 ```
 
 or add
 
 ```
-"kidzen/yii2-dynamicform": "*"
+"hmtvltk2/yii2-dynamicform": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -58,7 +58,7 @@ Usage
 <?php
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use kidzen\dynamicform\DynamicFormWidget;
+use hmtvltk2\dynamicform\DynamicFormWidget;
 ?>
 
 <div class="customer-form">
@@ -387,7 +387,7 @@ class Model extends \yii\base\Model
 <?php
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use kidzen\dynamicform\DynamicFormWidget;
+use hmtvltk2\dynamicform\DynamicFormWidget;
 ?>
 
 <div class="customer-form">
